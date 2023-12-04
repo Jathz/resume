@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,9 +12,11 @@ import {
   AiOutlineLinkedin,
   AiOutlineYoutube,
 } from "react-icons/ai";
+import { SignInButton, SignOutButton, useUser } from "@clerk/nextjs";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { isSignedIn } = useUser();
 
   const handleNav = () => {
     setMenuOpen(!menuOpen);
@@ -30,22 +34,36 @@ const Navbar = () => {
             priority
           />
         </Link>
-        <div className="hidden sm:flex">
-          <ul className="hidden sm:flex">
+        <div className="hidden items-center justify-center sm:flex">
+          <ul className="hidden items-center justify-center sm:flex">
             <Link href="/">
               <li className="ml-10 text-xl uppercase hover:border-b">Home</li>
             </Link>
             <Link href="/about">
               <li className="ml-10 text-xl uppercase hover:border-b">About</li>
             </Link>
-            <Link href="/blog">
-              <li className="ml-10 text-xl uppercase hover:border-b">Blog</li>
-            </Link>
             <Link href="/contact">
-              <li className="ml-10 text-xl uppercase hover:border-b">
-                Contact
-              </li>
+              <li className="ml-10 text-xl uppercase hover:border-b">Contact</li>
             </Link>
+            {!isSignedIn ? (
+              <SignInButton>
+                <button
+                  type="button"
+                  className="ml-10 rounded-lg bg-blue-700 px-2 py-1 text-xl uppercase text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                >
+                  Sign In
+                </button>
+              </SignInButton>
+            ) : (
+              <SignOutButton>
+                <button
+                  type="button"
+                  className="ml-10 rounded-lg bg-blue-700 px-2 py-1 text-xl uppercase text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                >
+                  Sign Out
+                </button>
+              </SignOutButton>
+            )}
           </ul>
         </div>
         <div onClick={handleNav} className="cursor-pointer pl-24 sm:hidden">
@@ -82,14 +100,6 @@ const Navbar = () => {
                 About
               </li>
             </Link>
-            <Link href="/blog">
-              <li
-                onClick={() => setMenuOpen(false)}
-                className="cursor-pointer py-4 hover:border-b"
-              >
-                Blog
-              </li>
-            </Link>
             <Link href="/contact">
               <li
                 onClick={() => setMenuOpen(false)}
@@ -98,6 +108,25 @@ const Navbar = () => {
                 Contact
               </li>
             </Link>
+            {!isSignedIn ? (
+              <SignInButton>
+                <button
+                  type="button"
+                  className="my-3 rounded-lg bg-blue-700 px-2 py-1 text-xl text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                >
+                  Sign In
+                </button>
+              </SignInButton>
+            ) : (
+              <SignOutButton>
+                <button
+                  type="button"
+                  className=" my-3 rounded-lg bg-blue-700 px-2 py-1 text-xl text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                >
+                  Sign Out
+                </button>
+              </SignOutButton>
+            )}
           </ul>
         </div>
         <div className="flex flex-row items-center justify-around pt-10">

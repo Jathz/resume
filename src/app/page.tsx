@@ -1,22 +1,21 @@
 //import Link from "next/link";
 
+//import { useUser } from "@clerk/nextjs";
+
 //import { CreatePost } from "~/app/_components/create-post";
-"use client";
-import { api } from "~/trpc/server";
-import Navbar from "../components/navbar";
+//import { api } from "~/trpc/server";
 
 export default function Home() {
   //const hello = await api.post.hello.query({ text: "from tRPC" });
-
   return (
     <main>
-      <Navbar />
+      
     </main>
   );
 }
 
-/*
-async function CrudShowcase() {
+
+/*async function CrudShowcase() {
   const latestPost = await api.post.getLatest.query();
 
   return (
@@ -30,5 +29,5 @@ async function CrudShowcase() {
       <CreatePost />
     </div>
   );
-}
-*/
+}*/
+
