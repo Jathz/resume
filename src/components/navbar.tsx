@@ -22,7 +22,7 @@ const Navbar = () => {
     setMenuOpen(!menuOpen);
   };
   return (
-    <nav className="fixed h-24 w-full bg-white shadow-xl">
+    <nav className="fixed h-24 w-full bg-white shadow-xl z-50">
       <div className="flex h-full w-full items-center justify-between px-4 2xl:px-16">
         <Link href="/">
           <Image
