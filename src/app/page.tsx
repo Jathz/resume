@@ -3,26 +3,14 @@
 //import { CreatePost } from "~/app/_components/create-post";
 "use client";
 import { api } from "~/trpc/server";
-
-import {
-  SignIn,
-  SignInButton,
-  SignOutButton,
-  UserButton,
-  useUser,
-} from "@clerk/nextjs";
+import Navbar from "../components/navbar";
 
 export default function Home() {
   //const hello = await api.post.hello.query({ text: "from tRPC" });
 
-  const {isSignedIn} = useUser();
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white">
-      <div>
-        {!isSignedIn && <SignInButton />}
-        {isSignedIn && <SignOutButton />}
-      </div>
-      <UserButton afterSignOutUrl="/" />
+    <main>
+      <Navbar />
     </main>
   );
 }
