@@ -1,6 +1,7 @@
 //import Link from "next/link";
 
 import Hero from "~/components/hero";
+import Timeline from "~/components/timeline";
 
 //import { useUser } from "@clerk/nextjs";
 
@@ -12,6 +13,7 @@ export default function Home() {
   return (
     <main>
       <Hero />
+      <Timeline />
       
     </main>
   );
