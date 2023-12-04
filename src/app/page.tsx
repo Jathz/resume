@@ -1,5 +1,7 @@
 //import Link from "next/link";
 
+import Hero from "~/components/hero";
+
 //import { useUser } from "@clerk/nextjs";
 
 //import { CreatePost } from "~/app/_components/create-post";
@@ -9,6 +11,7 @@ export default function Home() {
   //const hello = await api.post.hello.query({ text: "from tRPC" });
   return (
     <main>
+      <Hero />
       
     </main>
   );
