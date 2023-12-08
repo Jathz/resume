@@ -9,7 +9,7 @@ import Img3 from "../../public/pexels-photo-4483608.jpeg";
 function Timeline() {
   return (
     <div>
-      <section className="bg-gray-100 text-gray-800 antialiased">
+      <section className="text-gray-800 antialiased">
         <div className="container relative mx-auto flex flex-col space-y-8 px-6">
           <div className="left-17 absolute inset-0 z-0 h-full w-2 bg-white shadow-md md:left-0 md:right-0 md:mx-auto"></div>
           <div className="relative z-10">
@@ -25,18 +25,18 @@ function Timeline() {
                 className="xs:top-11 xs:left-26 absolute inset-0 left-10 h-4 w-4 rotate-45 transform bg-white md:left-14"
                 aria-hidden="true"
               ></div>
-              <div className="rounded-md bg-white p-6 shadow-md">
+              <div className="rounded-md backdrop-blur-md shadow-xl hover:shadow-2xl p-6 cursor-pointer">
                 <span className="text-sm font-bold tracking-wide text-indigo-600">
                   Aug 2023 - Current
                 </span>
-                <h1 className="pt-1 text-2xl font-bold">
+                <h1 className="pt-1 text-2xl font-bold text-white">
                   Full Stack Engineer @{" "}
                   <Link href="https://staging.pllum.app" passHref={true}>
                     {" "}
                     Pllum
                   </Link>
                 </h1>
-                <div className="pl-4 pt-1">
+                <div className="pl-4 pt-1 text-gray-400 mt-4">
                   <ul className="list-disc">
                     <li>
                       Utilising the T3 stack, incorporating Next.js, TypeScript,
@@ -81,12 +81,12 @@ function Timeline() {
                 className="xs:top-11 xs:left-26 absolute inset-0 left-10 h-4 w-4 rotate-45 transform bg-white md:left-14 md:left-auto md:right-14"
                 aria-hidden="true"
               ></div>
-              <div className="rounded-md bg-white p-6 shadow-md">
+              <div className="rounded-md backdrop-blur-md shadow-xl hover:shadow-2xl p-6 cursor-pointer">
                 <span className="text-sm font-bold tracking-wide text-indigo-600">
                   May 2022 - Current
                 </span>
-                <h1 className="pt-1 text-2xl font-bold">Programming Tutor</h1>
-                <div className="pl-4 pt-1">
+                <h1 className="pt-1 text-2xl font-bold text-white">Programming Tutor</h1>
+                <div className="pl-4 pt-1 text-gray-400 mt-4">
                   <ul className="list-disc">
                     <li>
                       Educating students beginner to intermediate programming
@@ -132,17 +132,17 @@ function Timeline() {
             />
             <div className="xs:pl-28 xs:pt-0 relative pt-2 md:ml-auto md:w-1/2 md:pl-16">
               <div
-                className="xs:top-11 xs:left-26 absolute inset-0 left-10 h-4 w-4 rotate-45 transform bg-white md:left-14"
+                className="xs:top-11 xs:left-26 absolute inset-0 left-10 h-4 w-4 rotate-45 transform backdrop-blur-md shadow-xl md:left-14"
                 aria-hidden="true"
               ></div>
-              <div className="rounded-md bg-white p-6 shadow-md">
+              <div className="rounded-md backdrop-blur-md shadow-xl hover:shadow-2xl p-6 cursor-pointer">
                 <span className="text-sm font-bold tracking-wide text-indigo-600">
                   Mar 2023 - May 2023
                 </span>
-                <h1 className="pt-1 text-2xl font-bold">
+                <h1 className="pt-1 text-2xl font-bold text-white">
                   Senior Office Assistant Election Material @ NSWEC
                 </h1>
-                <p className="pt-1">
+                <p className="pt-1 text-gray-400 mt-4">
                   Delivery, liased with office coordinate office assistants to
                   ensure appropriate number of accurate materials. Use software
                   to keep track of materials. Organised all returns. Ensured

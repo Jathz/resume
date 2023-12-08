@@ -1,7 +1,8 @@
-//import Link from "next/link";
-
+"use client"
 import Hero from "~/components/hero";
 import Timeline from "~/components/timeline";
+
+//import LocomotiveScroll from "locomotive-scroll";
 
 //import { useUser } from "@clerk/nextjs";
 
@@ -10,15 +11,14 @@ import Timeline from "~/components/timeline";
 
 export default function Home() {
   //const hello = await api.post.hello.query({ text: "from tRPC" });
+
   return (
     <main>
       <Hero />
       <Timeline />
-      
     </main>
   );
 }
-
 
 /*async function CrudShowcase() {
   const latestPost = await api.post.getLatest.query();
@@ -35,4 +35,3 @@ export default function Home() {
     </div>
   );
 }*/
-

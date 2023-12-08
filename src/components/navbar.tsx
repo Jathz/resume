@@ -22,30 +22,25 @@ const Navbar = () => {
     setMenuOpen(!menuOpen);
   };
   return (
-    <nav className="fixed h-14 w-full bg-white shadow-xl z-50">
+    <nav className="h-14 w-full text-white font-light z-50 ">
       <div className="flex h-full w-full items-center justify-between px-4 2xl:px-16">
         <Link href="/">
-          <Image
-            src={Logo}
-            alt="Logo"
-            width={205}
-            height={75}
-            className="cursor-pointer"
-            priority
-          />
+          <span className="font-bold">
+          Jathurson.
+          </span>
         </Link>
-        <div className="hidden items-center justify-center sm:flex">
+        <div className="hidden items-center justify-center sm:flex text-gray-400">
           <ul className="hidden items-center justify-center sm:flex">
             <Link href="/">
-              <li className="ml-10 text-xl uppercase hover:border-b">Home</li>
+              <li className="ml-10 text-md hover:border-b">Home</li>
             </Link>
             <Link href="/about">
-              <li className="ml-10 text-xl uppercase hover:border-b">About</li>
+              <li className="ml-10 text-md hover:border-b">About</li>
             </Link>
             <Link href="/contact">
-              <li className="ml-10 text-xl uppercase hover:border-b">Contact</li>
+              <li className="ml-10 text-md hover:border-b">Contact</li>
             </Link>
-            {!isSignedIn ? (
+            {/*!isSignedIn ? (
               <SignInButton>
                 <button
                   type="button"
@@ -63,7 +58,7 @@ const Navbar = () => {
                   Sign Out
                 </button>
               </SignOutButton>
-            )}
+            )*/}
           </ul>
         </div>
         <div onClick={handleNav} className="cursor-pointer pl-24 sm:hidden">
