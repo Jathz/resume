@@ -1,12 +1,11 @@
 "use client";
-import { api } from "~/trpc/server";
-import Navbar from "~/components/navbar";
 
-export default function About() {
+export default function Contact() {
   //const hello = await api.post.hello.query({ text: "from tRPC" });
 
   return (
     <main>
+      contact
     </main>
   );
 }

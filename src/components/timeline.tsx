@@ -36,7 +36,7 @@ function Timeline() {
                     Pllum
                   </Link>
                 </h1>
-                <p className="pl-4 pt-1">
+                <div className="pl-4 pt-1">
                   <ul className="list-disc">
                     <li>
                       Utilising the T3 stack, incorporating Next.js, TypeScript,
@@ -64,7 +64,7 @@ function Timeline() {
                       to achieve shared objectives.
                     </li>
                   </ul>
-                </p>
+                </div>
               </div>
             </div>
           </div>
@@ -86,7 +86,7 @@ function Timeline() {
                   May 2022 - Current
                 </span>
                 <h1 className="pt-1 text-2xl font-bold">Programming Tutor</h1>
-                <p className="pl-4 pt-1">
+                <div className="pl-4 pt-1">
                   <ul className="list-disc">
                     <li>
                       Educating students beginner to intermediate programming
@@ -118,7 +118,7 @@ function Timeline() {
                       programming.
                     </li>
                   </ul>
-                </p>
+                </div>
               </div>
             </div>
           </div>
