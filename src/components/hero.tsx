@@ -1,5 +1,7 @@
 //import { SignIn } from "@clerk/nextjs";
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
+import Me from "../../public/Me.jpg";
 
 function Hero() {
   const [wave, setWave] = useState<boolean>(false);
@@ -72,7 +74,16 @@ function Hero() {
           {typedText}
         </p>
       </div>
-      <div className="mx-auto basis-1/2">{/*<SignIn />*/}</div>
+      <div className="mx-auto basis-1/2 items-center justify-center mt-5">
+        <Image 
+        src={Me}
+        alt="Hi"
+        width={500}
+        height={500} 
+        className="rounded-xl shadow-2xl"
+        />
+
+      </div>
     </section>
   );
 }
