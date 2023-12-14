@@ -8,7 +8,6 @@ import Img3 from "../../public/pexels-photo-4483608.jpeg";
 
 function Timeline() {
   return (
-    <div>
       <section className="text-gray-800 antialiased">
         <div className="container relative mx-auto flex flex-col space-y-8 px-6">
           <div className="left-17 absolute inset-0 z-0 h-full w-2 bg-white shadow-md md:left-0 md:right-0 md:mx-auto"></div>
@@ -78,7 +77,7 @@ function Timeline() {
             />
             <div className="xs:pl-28 xs:pt-0 relative pt-2 md:ml-0 md:mr-auto md:w-1/2 md:pl-0 md:pr-16">
               <div
-                className="xs:top-11 xs:left-26 absolute inset-0 left-10 h-4 w-4 rotate-45 transform bg-white md:left-14 md:left-auto md:right-14"
+                className="xs:top-11 xs:left-26 absolute inset-0 left-10 h-4 w-4 rotate-45 transform bg-white md:left-14 md:right-14"
                 aria-hidden="true"
               ></div>
               <div className="rounded-md backdrop-blur-md shadow-xl hover:shadow-2xl p-6 cursor-pointer">
@@ -156,7 +155,6 @@ function Timeline() {
           </div>
         </div>
       </section>
-    </div>
   );
 }
 
