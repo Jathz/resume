@@ -2,6 +2,14 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Ame from "../../public/Ame.png";
 
+import {
+  AiOutlineInstagram,
+  AiOutlineLinkedin,
+  AiOutlineYoutube,
+  AiOutlineGithub,
+} from "react-icons/ai";
+import Link from "next/link";
+
 function Hero() {
   const [wave, setWave] = useState<boolean>(false);
   const [waveCount, setWaveCount] = useState<number>(0);
@@ -43,7 +51,7 @@ function Hero() {
   }, [waveCount]);
 
   return (
-    <section className="z-0 flex h-[860px] w-full flex-col justify-evenly bg-cover pt-40 sm:pt-28 md:flex-row">
+    <section className="z-0 mb-28 flex h-full w-full flex-col justify-evenly bg-cover pt-40 sm:pt-28 md:flex-row">
       <div className="relative basis-3/4 lg:px-16">
         <h1 className="px-16 pb-4 pt-16 text-left text-6xl font-bold text-black">
           <span className="text-4xl font-bold text-white sm:text-7xl">
@@ -72,16 +80,45 @@ function Hero() {
         <p className="px-16 pt-8 text-lg font-light text-gray-400">
           {typedText}
         </p>
+        <div className="my-10 flex flex-row items-center justify-center gap-10 ">
+          <Link href={"https://github.com/Jathz"}>
+            <AiOutlineGithub
+              size={50}
+              className="transform cursor-pointer text-gray-50 transition duration-500 hover:scale-125 hover:text-red-400"
+            />
+          </Link>
+          <Link
+            href={
+              "https://www.youtube.com/channel/UCJ2Hu96W2ecIvh94t4ZWX8g/videos"
+            }
+          >
+            <AiOutlineYoutube
+              size={50}
+              className="transform cursor-pointer text-gray-50 transition duration-500 hover:scale-125 hover:text-red-400"
+            />
+          </Link>
+          <Link href={"https://www.linkedin.com/in/jathurson/"}>
+            <AiOutlineLinkedin
+              size={50}
+              className="transform cursor-pointer text-gray-50 transition duration-500 hover:scale-125 hover:text-red-400"
+            />
+          </Link>
+          <Link href={"https://www.instagram.com/thedranmaster/"}>
+            <AiOutlineInstagram
+              size={50}
+              className=" transform cursor-pointer text-gray-50 transition duration-500 hover:scale-125 hover:text-red-400"
+            />
+          </Link>
+        </div>
       </div>
       <div className="mx-auto basis-1/2 items-center justify-center">
-        <Image 
-        src={Ame}
-        alt="Hi"
-        width={500}
-        height={500} 
-        className="rounded-xl shadow-2xl h-fit w-auto"
+        <Image
+          src={Ame}
+          alt="Hi"
+          width={250}
+          height={250}
+          className="h-96 w-auto rounded-xl shadow-2xl md:h-fit"
         />
-
       </div>
     </section>
   );
