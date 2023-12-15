@@ -1,7 +1,6 @@
-//import { SignIn } from "@clerk/nextjs";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import Me from "../../public/Me.jpg";
+import Ame from "../../public/Ame.png";
 
 function Hero() {
   const [wave, setWave] = useState<boolean>(false);
@@ -44,7 +43,7 @@ function Hero() {
   }, [waveCount]);
 
   return (
-    <section className="z-0 flex h-[860px] w-full flex-col justify-evenly bg-cover pt-48 sm:pt-36 md:flex-row">
+    <section className="z-0 flex h-[860px] w-full flex-col justify-evenly bg-cover pt-40 sm:pt-28 md:flex-row">
       <div className="relative basis-3/4 lg:px-16">
         <h1 className="px-16 pb-4 pt-16 text-left text-6xl font-bold text-black">
           <span className="text-4xl font-bold text-white sm:text-7xl">
@@ -74,13 +73,13 @@ function Hero() {
           {typedText}
         </p>
       </div>
-      <div className="mx-auto basis-1/2 items-center justify-center mt-5">
+      <div className="mx-auto basis-1/2 items-center justify-center">
         <Image 
-        src={Me}
+        src={Ame}
         alt="Hi"
         width={500}
         height={500} 
-        className="rounded-xl shadow-2xl"
+        className="rounded-xl shadow-2xl h-fit w-auto"
         />
 
       </div>
@@ -89,3 +88,14 @@ function Hero() {
 }
 
 export default Hero;
+
+/*<div className="mx-auto basis-1/2 items-center justify-center mt-5">
+        <Image 
+        src={Me}
+        alt="Hi"
+        width={500}
+        height={500} 
+        className="rounded-xl shadow-2xl"
+        />
+
+      </div>*/

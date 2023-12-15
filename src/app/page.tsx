@@ -1,5 +1,6 @@
 "use client"
 import React, { useEffect, useRef, useState } from 'react';
+import Banner from '~/components/banner';
 import Hero from '~/components/hero';
 import Timeline from '~/components/timeline';
 
@@ -41,6 +42,7 @@ export default function Home() {
       <div ref={heroRef}>
         <Hero />
       </div>
+      <Banner />
       <div ref={timelineRef}>
         <Timeline />
       </div>
