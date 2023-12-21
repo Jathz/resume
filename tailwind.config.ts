@@ -9,6 +9,9 @@ export default {
         sans: ["var(--font-sans)", ...fontFamily.sans],
         'poppins': ['Poppins', 'sans-serif']
       },
+      spacing: {
+        '128': '32rem',
+      }
     },
   },
   plugins: [],

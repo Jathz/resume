@@ -5,7 +5,6 @@ import { useInView } from "react-intersection-observer";
 
 import Img1 from "../../public/icon-512x512.png";
 import Img2 from "../../public/pexels-photo-546819.jpeg";
-import Img3 from "../../public/pexels-photo-4483608.jpeg";
 import aec from "../../public/aec.jpg";
 import dhm from "../../public/dhm.jpg";
 import nswec from "../../public/nswec.png";

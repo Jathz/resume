@@ -2,11 +2,12 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Banner from '~/components/banner';
 import Hero from '~/components/hero';
+import Projects from '~/components/projects';
 import Timeline from '~/components/timeline';
 
 
 export default function Home() {
-  const [backgroundColor, setBackgroundColor] = useState('bg-[#131D3C] transition-colors duration-1000'); // Set default background color with transition
+  const [backgroundColor, setBackgroundColor] = useState('bg-blue-950 transition-colors duration-1000'); // Set default background color with transition
   const timelineRef = useRef<HTMLDivElement>(null);
   const heroRef = useRef<HTMLDivElement>(null);
 
@@ -24,9 +25,9 @@ export default function Home() {
 
         // Check if the Hero section is approaching the Timeline section with an offset
         if (heroRect.bottom - transitionOffset <= 0 && timelineRect.top < window.innerHeight - transitionOffset) {
-          setBackgroundColor('bg-[#180342] transition-colors duration-1000'); // Change to your desired Tailwind CSS background class with transition
+          setBackgroundColor('bg-indigo-950 transition-colors duration-1000'); // Change to your desired Tailwind CSS background class with transition
         } else {
-          setBackgroundColor('bg-[#131D3C] transition-colors duration-1000'); // Change to the default Tailwind CSS background class with transition
+          setBackgroundColor('bg-blue-950 transition-colors duration-1000'); // Change to the default Tailwind CSS background class with transition
         }
       }
     };
@@ -46,6 +47,7 @@ export default function Home() {
       <div ref={timelineRef}>
         <Timeline />
       </div>
+      <Projects />
     </main>
   );
 }
